@@ -1,0 +1,21 @@
+        <div class="container">
+            <h2>User list</h2>
+            <table class="table">
+                <tr>
+                    <th>
+                        Picture
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        View Details
+                    </th>
+                </tr>
+                <tr ng-repeat="user in userCtrl.users">
+                    <td><img src="{{user.picture.thumbnail}}" alt=""></td>
+                    <td ng-bind="user.first"></td>
+                    <td><a href="#/userDetails/{{user.email}}">Details</a></td>
+                </tr>
+            </table>
+        </div>

@@ -1,0 +1,24 @@
+<div class="container">
+            <h2>Person Details</h2>
+            <table class="table" ng-repeat="user in userCtrl.users | filter: {email : userCtrl.email.email}">
+                <tr>
+                    <td>Title: {{user.title}}</td>
+                    <td>Firstname: {{user.first}}</td>
+                    <td>Lastname :{{user.last}}</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><img src="{{user.picture.large}}" alt=''></td>
+                    <td>Street: {{user.street}}</td>
+                    <td>City: {{user.city}}</td>
+                </tr>
+                <tr>
+                    <td>State: {{user.state}}</td>
+                    <td>Zip {{user.zip}}</td>
+                </tr>
+                <tr>
+                   <td>Phone {{user.phone}}</td>
+                    <td>Cell {{user.cell}}</td>
+                    <td>Email {{user.email}}</td>
+                </tr>
+            </table>
+        </div>
